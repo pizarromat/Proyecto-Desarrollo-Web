@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/estilos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Productos</title>
 </head>
@@ -37,7 +38,7 @@
     </header>
 
     <main class="mainProductos">
-        <h2 class="productos1">Buzos</h2>
+        <h2 class="productos1" data-aos="fade-right"> Buzos</h2>
         <div class="fotosproductos1">
             <figure class="figure">
                 <img src="../img/buzo1.jpg" alt="buzo1" >
@@ -50,7 +51,7 @@
             </figure>
         </div>
         
-        <h2 class="productos2">Remeras</h2>
+        <h2 class="productos2" >Remeras</h2>
         <div class="fotosproductos2">
             <figure class="figure">
                 <img src="../img/remera1.jpg" alt="remera1" >
@@ -63,7 +64,7 @@
             </figure>
         </div>
         
-        <h2 class="productos3">Gorras</h2>
+        <h2 class="productos3" data-aos="fade-right">Gorras</h2>
         <div class="fotosproductos3">
             <figure class="figure">
                 <img src="../img/gorra1.jpg" alt="gorra1" >
@@ -89,7 +90,13 @@
             </a>
         </div>
         
-        <p class="parrafoFooter">© 2022, drew house</p>
+        <p class="parrafoFooter" >© 2022, drew house</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
 </body>
 </html>
