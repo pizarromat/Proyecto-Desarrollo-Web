@@ -31,40 +31,30 @@
     </nav>
   </header>
 
-  <main class="contenido">
-    <main class="mainContacto">
-      <h2 class="titulo-contacto">Contacto</h2>
-      <p class="parrafo-contacto">Ingresa tus datos para poder comprar ropa sin riesgo</p>
-      <form class="datos">
-        <fieldset>
-          <legend>Ingresa tus datos</legend>
-          <div>
-           <label for="nombre">Ingresa tu nombre</label>
-            <input type="text" name="nombre" placeholder="Matias">
-          </div>
-    
-          <div>
-            <label for="edad">Ingresa tu edad</label>
-            <input type="number" name="edad" placeholder="20">
-          </div>
-      
-          <div>
-            <label for="apellido">Ingresa tu apellido</label>
-            <input type="text" name="apellido" placeholder="Pizarro">
-          </div>
-      
-          <div>
-            <label for="correo">Ingresa tu correo</label>
-            <input type="email" name="correo" placeholder="Ejemplo@gmail.com">
-          </div>
-  
-          <input type="submit" value="enviar" class="botoncontacto">
-        </fieldset>
+  <main class="mainContacto">
+    <div class="contacto_derecha">
+      <h1 class="contacto_titulo">Contactese con nosotros</h1>
+      <form action="" class="contacto_form-wrapper">
+        <div class="contacto_input-line">
+          <label for="name" class="contacto_label">Nombre</label>
+          <input type="text" name="name" id="name" class="contacto_input">
+        </div>
+        <div class="contacto_input-line">
+          <label for="email" class="contacto_label">Email</label>
+          <input type="email" name="email" id="email" class="contacto_input">
+        </div>
+        <div class="contacto_input-line">
+          <label for="subject" class="contacto_label">Tema</label>
+          <input type="text" name="subject" id="subject" class="contacto_input">
+        </div>
+        <div class="contacto_input-line">
+          <label for="message" class="contacto_label">Mensaje</label>
+          <textarea name="message" id="message" class="contacto_input"></textarea>
+        </div>
+        <input type="submit" value="Enviar" class="contacto_submit-button">
       </form>
-    </main>
+    </div>
   </main>
-  
-  
   
   <footer class="footerFondoNoFijo">
     <div class="redes">
