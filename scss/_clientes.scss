@@ -1,0 +1,28 @@
+
+/* Clientes --------------------------------------------------------*/
+
+.mainClientes{
+    margin-top: 7%;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: 
+    "titulo-clientes"
+    "fotos-clientes";
+    .titulo-clientes{
+        background-color: $cool-drew-oscuro;
+        color: $cool-negro;
+        border: 2px outset $cool-drew;
+        grid-area: titulo-clientes;
+    }
+    .fotosclientes{
+        grid-area: fotos-clientes;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    }
+}
+

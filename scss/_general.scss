@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    font-family: 'Poppins', sans-serif; 
+    background-image: url("../img/fondoo.jpg");
+    background-repeat: repeat;
+    background-size: 100%; 
+    
+    h2{
+        color: $cool-drew;
+        display: flex;
+        justify-content: center;
+    }
+    .figure {
+        border: 1px outset $cool-drew;
+    }
+    
+    /* footer */
+    
+    footer{
+        background-color: rgba(218, 190, 96, 0.5); 
+        display: grid;
+        grid-template-areas: 
+        "redes-sociales"
+        "parrafo";
+        justify-content: center;
+        padding: 1rem;
+        margin: 0;
+        .redes{
+            display:flex;
+            justify-content: center;
+            gap: 1rem;
+            grid-area: redes-sociales;
+        }
+        .parrafoFooter{
+            font-size: 1rem;
+            font-weight: bold;
+            grid-area: parrafo;
+        }
+    }
+    .footerFondoNoFijo{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    
+
+}
