@@ -70,6 +70,55 @@ body .footerFondoNoFijo {
      object-fit: cover;
 }
 
+/* map */
+.titulo-buzos {
+  background-color: rgba(218, 190, 96, 0.5);
+}
+
+.titulo-remeras {
+  background-color: rgba(218, 190, 96, 0.5);
+}
+
+.titulo-gorras {
+  background-color: rgba(218, 190, 96, 0.5);
+}
+
+/* map-get */
+.precio1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  background-color: rgba(247, 246, 240, 0.384);
+}
+
+/* Extend */
+.titulo, .titulo-gorras, .titulo-remeras, .titulo-buzos {
+  color: #121212;
+  border: 2px outset rgb(228, 191, 68);
+}
+
+.fotosproductos, .fotosproductos3, .fotosproductos2, .fotosproductos1 {
+  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 0.7fr 0.7fr 0.7fr;
+}
+
+/* mixin */
+.foto-inicio img {
+  height: 100%;
+  width: 100%;
+}
+
+.foto-inicio2 img {
+  height: 100%;
+  width: 100%;
+}
+
+.prendas-inicio img {
+  height: 100%;
+  width: 100%;
+}
+
 /* BOOSTRAP --------------------------------------------------------*/
 .bg-propio {
   background-color: white;
@@ -100,18 +149,8 @@ body .footerFondoNoFijo {
   grid-area: foto-portada1;
 }
 
-.foto-inicio img {
-  height: 100%;
-  width: 100%;
-}
-
 .foto-inicio2 {
   grid-area: foto-portada2;
-}
-
-.foto-inicio2 img {
-  height: 100%;
-  width: 100%;
 }
 
 .prendas-inicio {
@@ -122,17 +161,8 @@ body .footerFondoNoFijo {
 }
 
 .prendas-inicio img {
-  height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.precio1 {
-  display: flex;
-  justify-content: center;
-  font-weight: 600;
-  background-color: rgba(247, 246, 240, 0.384);
 }
 
 /* Productos --------------------------------------------------------*/
@@ -145,32 +175,20 @@ body .footerFondoNoFijo {
   grid-template-areas: "buzos" "fotos-buzos" "remeras" "fotos-remeras" "gorras" "fotos-gorras";
 }
 
-.productos1 {
-  background-color: rgba(218, 190, 96, 0.5);
-  color: #121212;
-  border: 2px outset rgb(228, 191, 68);
+.titulo-buzos {
   grid-area: buzos;
 }
 
-.productos2 {
-  background-color: rgba(218, 190, 96, 0.5);
-  color: #121212;
-  border: 2px outset rgb(228, 191, 68);
+.titulo-remeras {
   grid-area: remeras;
 }
 
-.productos3 {
-  background-color: rgba(218, 190, 96, 0.5);
-  color: #121212;
-  border: 2px outset rgb(228, 191, 68);
+.titulo-gorras {
   grid-area: gorras;
 }
 
 .fotosproductos1 {
-  gap: 0.5rem;
   grid-area: fotos-buzos;
-  display: grid;
-  grid-template-columns: 0.7fr 0.7fr 0.7fr;
 }
 .fotosproductos1 img {
   width: 100%;
@@ -181,10 +199,7 @@ body .footerFondoNoFijo {
 }
 
 .fotosproductos2 {
-  gap: 0.5rem;
   grid-area: fotos-remeras;
-  display: grid;
-  grid-template-columns: 0.7fr 0.7fr 0.7fr;
 }
 .fotosproductos2 img {
   width: 100%;
@@ -195,10 +210,7 @@ body .footerFondoNoFijo {
 }
 
 .fotosproductos3 {
-  gap: 0.5rem;
   grid-area: fotos-gorras;
-  display: grid;
-  grid-template-columns: 0.7fr 0.7fr 0.7fr;
 }
 .fotosproductos3 img {
   width: 100%;
@@ -328,6 +340,7 @@ body .footerFondoNoFijo {
   grid-area: parrafo-nosotros6;
 }
 
+/* media */
 @media (max-width: 1400px) {
   .mainInicio {
     margin-top: 6%;

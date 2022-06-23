@@ -1,0 +1,80 @@
+/* map */
+
+$productos: (
+    buzos: $cool-drew-oscuro,
+    remeras: $cool-drew-oscuro,
+    gorras: $cool-drew-oscuro,
+);
+@each $tit, $color in $productos {
+    .titulo-#{$tit}{
+        background-color: $color;
+    }
+}
+
+/* map-get */
+
+$mapeo: (
+    color:rgba(247, 246, 240, 0.384),
+    centro: center,
+    tFuente: 600,
+    Dplay: flex, 
+);
+.precio1{
+
+    display: map-get($mapeo, Dplay); 
+    justify-content: map-get($mapeo, centro);
+    font-weight: map-get($mapeo, tFuente);
+    background-color: map-get($mapeo, color); 
+    
+}
+
+/* Extend */
+
+.titulo{
+    color: $cool-negro;
+    border: 2px outset $cool-drew;
+}
+.titulo-buzos{
+    @extend .titulo;
+}
+.titulo-remeras{
+    @extend .titulo;
+}
+.titulo-gorras{
+    @extend .titulo;
+} 
+
+.fotosproductos{
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 0.7fr 0.7fr 0.7fr;
+}
+.fotosproductos1{
+    @extend .fotosproductos;
+}
+.fotosproductos2{
+    @extend .fotosproductos;
+}
+.fotosproductos3{
+    @extend .fotosproductos;
+}
+
+/* mixin */
+
+@mixin sizes ($width, $height){
+    height: $height;
+    width: $width;
+}
+.foto-inicio img{
+    @include sizes(100%,100%);
+}
+.foto-inicio2 img{
+    @include sizes(100%,100%);
+}
+.prendas-inicio img{
+    @include sizes(100%,100%);
+}
+
+
+
+
