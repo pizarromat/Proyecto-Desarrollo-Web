@@ -48,14 +48,16 @@
     grid-area: foto-portada2;
 }
 .prendas-inicio{
-    gap: 0.5rem;
+    padding: 1%;
+    gap: 5rem;
     grid-area: fotos-vender;
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    img{
+        object-fit: cover;
+    }
 }
-.prendas-inicio img{
-    object-fit: cover;
-}
+
 
 /* Productos --------------------------------------------------------*/
 

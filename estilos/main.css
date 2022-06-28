@@ -154,12 +154,12 @@ body .footerFondoNoFijo {
 }
 
 .prendas-inicio {
-  gap: 0.5rem;
+  padding: 1%;
+  gap: 5rem;
   grid-area: fotos-vender;
   display: grid;
   grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
 }
-
 .prendas-inicio img {
   -o-object-fit: cover;
      object-fit: cover;
