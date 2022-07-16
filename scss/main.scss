@@ -1,15 +1,10 @@
 /* Import ----------------------------------------------------------- */
+
 @import "variables";
 @import "general";
-@import "clientes";
 @import "operaciones";
 
-
-
-
-
 /* BOOSTRAP --------------------------------------------------------*/
-
 
 .bg-propio{
     background-color: $cool-blanco;
@@ -27,7 +22,6 @@
     }
 }
 
-
 /* index --------------------------------------------------------*/
 
 .mainInicio{
@@ -35,9 +29,9 @@
     background-color: $cool-blanco;
     display: grid;
     grid-template-areas: 
-    "foto-portada1"
-    "fotos-vender"
     "foto-portada2"
+    "fotos-vender"
+    "foto-portada1"
     ;
     gap: 1rem;
 }
@@ -48,8 +42,8 @@
     grid-area: foto-portada2;
 }
 .prendas-inicio{
-    padding: 1%;
-    gap: 5rem;
+    padding: 1% 15% 0 15%;
+    gap: 3rem;
     grid-area: fotos-vender;
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
@@ -58,14 +52,13 @@
     }
 }
 
-
 /* Productos --------------------------------------------------------*/
 
 .mainProductos{
-    padding: 1%;
-    margin-top: 7%;
+    padding:0 8% 3% 8%;
+    margin-top: 8%;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
     grid-template-areas:
     "buzos"
@@ -74,48 +67,81 @@
     "fotos-remeras"
     "gorras"
     "fotos-gorras";
-}
-.titulo-buzos{
-    grid-area: buzos;
-}
-.titulo-remeras{
-    grid-area: remeras;
-}
-.titulo-gorras{
-    grid-area: gorras;
-}  
 
-.fotosproductos1{
-    grid-area: fotos-buzos; 
-    img{
-        width: 100%;
-        height: 100%;
-        &:hover{
-            transform: scale(1.2);
+    .titulo-buzos{
+        grid-area: buzos;
+    }
+    .titulo-remeras{
+        grid-area: remeras;
+    }
+    .titulo-gorras{
+        grid-area: gorras;
+    }  
+    
+    .fotosproductos1{
+        grid-area: fotos-buzos;
+        gap: 1rem; 
+        img{
+            width: 100%;
+            height: 100%;
+            &:hover{
+                transform: scale(1.2);
+            }
         }
     }
-}
-.fotosproductos2{
-    grid-area: fotos-remeras; 
-    img{
-        width: 100%;
-        height: 100%;
-        &:hover{
-            transform: scale(1.2);
+    .fotosproductos2{
+        grid-area: fotos-remeras;
+        gap: 1rem; 
+        img{
+            width: 100%;
+            height: 100%;
+            &:hover{
+                transform: scale(1.2);
+            }
         }
     }
-}
-.fotosproductos3{
-    grid-area: fotos-gorras; 
-    img{
-        width: 100%;
-        height: 100%;
-        &:hover{
-            transform: scale(1.2);
-        }
-    }              
+    .fotosproductos3{
+        grid-area: fotos-gorras; 
+        gap: 1rem;
+        img{
+            width: 100%;
+            height: 100%;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }              
+    }
 }
 
+
+/* Clientes --------------------------------------------------------*/
+
+.mainClientes{
+    margin-top: 8%;
+    padding: 0 8% 3% 8%;
+    justify-content: center;
+    gap: 3rem;
+    display: grid;
+    grid-template-areas: 
+    "titulo-clientes"
+    "fotos-clientes";
+    .titulo-clientes{
+        background-color: $cool-drew-oscuro;
+        color: $cool-negro;
+        border: 2px outset $cool-drew;
+        grid-area: titulo-clientes;
+    }
+    .fotosclientes{
+        grid-area: fotos-clientes;
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    }
+}
 
 /* Contacto --------------------------------------------------------*/
 
@@ -126,86 +152,89 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $cool-blanco;
-}
-.contacto_derecha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 7.3% 0 4.7%;
-    width: 50%;
-}
-.contacto-titulo{
-    font-size: 100px;
-    font-weight: 400;
-    margin-bottom: 70px;
-    text-transform: uppercase;
-}
-.contacto_form-wrapper, .contacto_input-line{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-}
-.contacto_input-line{
-    margin-bottom: 18px;
-}
-.contacto_label{
-    font-size: 18px;
-    font-weight: 600;
-}
-.contacto_input{
-    height: 30px;
-    outline: none;
-    padding: 5px 0;
-    border-bottom: 2px solid ;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    width: 100%;
-    color: $cool-negro;
-    background-color: transparent;
-}
-.contacto_input--textarea{
-    height: 100px;
-    outline: none;
-    padding: 5px 0;
-    border-bottom: 2px solid $cool-negro;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    width: 100%;
-    color: $cool-negro;
-    background-color: transparent;
-    resize: none;
-}
-.contacto_submit-button{
-    padding: 18px 55px;
-    background-color: $cool-negro;
-    border-radius: 50px;
-    color: $cool-blanco;
-    font-weight: 600;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    &:hover{
+    background-color: rgba(253, 250, 237, 0.685);
+    .contacto_derecha{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 7.3% 0 4.7%;
+        width: 50%;
+    }
+    .contacto-titulo{
+        font-size: 100px;
+        font-weight: 400;
+        margin-bottom: 70px;
+        text-transform: uppercase;
+    }
+    .contacto_form-wrapper, .contacto_input-line{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    .contacto_input-line{
+        margin-bottom: 18px;
+    }
+    .contacto_label{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .contacto_input{
+        height: 30px;
+        outline: none;
+        padding: 5px 0;
+        border-bottom: 2px solid ;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        color: $cool-negro;
+        background-color: transparent;
+    }
+    .contacto_input--textarea{
+        height: 100px;
+        outline: none;
+        padding: 5px 0;
+        border-bottom: 2px solid $cool-negro;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        color: $cool-negro;
+        background-color: transparent;
+        resize: none;
+    }
+    .contacto_submit-button{
+        padding: 18px 55px;
         background-color: $cool-negro;
+        border-radius: 50px;
+        color: $cool-blanco;
+        font-weight: 600;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        &:hover{
+            background-color: $cool-negro;
+        }
     }
 }
+
 
 
 /* Nosotros --------------------------------------------------------*/
 
 .mainNosotros{
+    background-color: rgb(247, 246, 226);
     margin-top: 3%;
     text-align: center;
     padding: 65px;
     font-size: 28px;
-    font-weight: 900; 
+    font-weight: 900;
     display: grid;
     grid-template-areas: 
+    "titulo"
     "parrafo-nosotros1"
     "parrafo-nosotros2"
     "parrafo-nosotros3"
@@ -213,41 +242,46 @@
     "parrafo-nosotros5"
     "parrafo-nosotros6"
     ; 
-}
-.parrafo-nosotros1{
-    grid-area: parrafo-nosotros1;
-}
-.parrafo-nosotros2{
-    grid-area: parrafo-nosotros2;
-}
-.parrafo-nosotros3{
-    grid-area: parrafo-nosotros3;
-}
-.parrafo-nosotros4{
-    grid-area: parrafo-nosotros4;
-}
-.parrafo-nosotros5{
-    grid-area: parrafo-nosotros5;
-}
-.parrafo-nosotros6{
-    grid-area: parrafo-nosotros6;
+    .historia-drewhouse{
+        grid-area: titulo;
+        color: $cool-drew;
+    }
+    .parrafo-nosotros1{
+        grid-area: parrafo-nosotros1;
+    }
+    .parrafo-nosotros2{
+        grid-area: parrafo-nosotros2;
+    }
+    .parrafo-nosotros3{
+        grid-area: parrafo-nosotros3;
+    }
+    .parrafo-nosotros4{
+        grid-area: parrafo-nosotros4;
+    }
+    .parrafo-nosotros5{
+        grid-area: parrafo-nosotros5;
+    }
+    .parrafo-nosotros6{
+        grid-area: parrafo-nosotros6;
+    }
 }
 
 
-/* media */
+
+/* media de diferentes medidas */
 
 @media(max-width:1400px){
     .mainInicio{
         margin-top: 6%;
     }
     .mainProductos{
-        margin-top: 8%;
+        margin-top: 9%;
     }
     .mainClientes{
-        margin-top: 8%;
+        margin-top: 10%;
     }
     .mainContacto{
-        margin-top: 8%;
+        margin-top: 12%;
     }
     .mainNosotros{
         margin-top: 4%;
@@ -259,13 +293,13 @@
         margin-top: 8%;
     }
     .mainProductos{
-        margin-top: 9%;
+        margin-top: 11%;
     }
     .mainClientes{
-        margin-top: 9%;
+        margin-top: 12%;
     }
     .mainContacto{
-        margin-top: 9%;
+        margin-top: 12%;
     }
     .mainNosotros{
         margin-top: 4%;
@@ -277,16 +311,16 @@
         margin-top: 10%;
     }
     .mainProductos{
-        margin-top: 12%;
+        margin-top: 14%;
     }
     .mainClientes{
-        margin-top: 12%;
+        margin-top: 15%;
     }
     .mainContacto{
-        margin-top: 12%;
+        margin-top: 14%;
     }
     .mainNosotros{
-        margin-top: 4%;
+        margin-top: 6%;
     }
 
 }
@@ -295,16 +329,16 @@
         margin-top: 10%;
     }
     .mainProductos{
-        margin-top: 18%;
+        margin-top: 19%;
     }
     .mainClientes{
-        margin-top: 15%;
+        margin-top: 20%;
     }
     .mainContacto{
-        margin-top: 15%;
+        margin-top: 20%;
     }
     .mainNosotros{
-        margin-top: 6%;
+        margin-top: 7%;
     }
 
 }
@@ -320,31 +354,36 @@
         margin-top: 20%;
     }
     .mainProductos{
-        margin-top: 25%;
+        margin-top: 32%;
     }
     .mainClientes{
-        margin-top: 20%;
+        margin-top: 31%;
     }
     .mainContacto{
-        margin-top: 25%;
+        margin-top: 30%;
     }
     .mainNosotros{
-        margin-top: 6%;
+        margin-top: 12%;
     }
     .prendas-inicio{
         grid-template-columns: none;
+        padding: 1% 20% 0 20%;
+        gap: 1rem;
     }
     .fotosproductos1{
         grid-template-columns: none;
+        padding:0 8% 3% 8%;
     }
     .fotosproductos2{
         grid-template-columns: none;
+        padding:0 8% 3% 8%;
     }
     .fotosproductos3{
         grid-template-columns: none;
+        padding:0 8% 3% 8%;
     }
     .fotosclientes{
-        grid-template-columns: none;
+        padding:0 8% 3% 8%;
     }
     .footerFondoNoFijo{
         position:relative;
